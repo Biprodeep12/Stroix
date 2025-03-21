@@ -62,9 +62,6 @@ body {
     transform: rotate(0);
   }
 }
-.micSel {
-  display: none;
-}
-.micCont:hover .micSel {
-  display: block;
+.mesCont {
+  scrollbar-width: none;
 }
