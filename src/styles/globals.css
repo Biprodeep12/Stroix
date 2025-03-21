@@ -1,26 +1,70 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.arBtn {
+  transform: translate(0, 25px);
+  animation: intextbtn 0.3s linear forwards;
+}
+
+.goBtn {
+  transform: translate(0, 0);
+  animation: outtextbtn 0.3s linear forwards;
+}
+
+@keyframes intextbtn {
+  from {
+    transform: translate(0, 25px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes outtextbtn {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0, 25px);
+    opacity: 0;
+  }
+}
+.micCont:hover .mic {
+  animation: cim 1s ease forwards;
+}
+
+@keyframes cim {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.micSel {
+  display: none;
+}
+.micCont:hover .micSel {
+  display: block;
 }
