@@ -5,17 +5,21 @@ interface Props {
 }
 
 export default function Side({ openSidebar }: Props) {
-  const [sidebarWidth, setSidebarWidth] = useState(
-    window.innerWidth < 600 ? 'w-[80%]' : 'w-[500px]',
-  );
+  const [sidebarWidth, setSidebarWidth] = useState('w-[500px]');
 
   useEffect(() => {
-    const handleResize = () => {
-      setSidebarWidth(window.innerWidth < 600 ? 'w-[80%]' : 'w-[500px]');
+    const updateSidebarWidth = () => {
+      setSidebarWidth(window.innerWidth < 600 ? 'w-[50%]' : 'w-[500px]');
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      updateSidebarWidth();
+      window.addEventListener('resize', updateSidebarWidth);
+    }
+
+    return () => {
+      window.removeEventListener('resize', updateSidebarWidth);
+    };
   }, []);
 
   return (
