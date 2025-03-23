@@ -138,7 +138,7 @@ export default function Ai({ openSidebar }: Props) {
       className={`h-screen w-full flex items-center relative
        flex-col ${isAi ? 'gap-2  justify-center' : 'justify-start'}`}>
       <nav
-        className={`top-0 absolute w-full flex ${
+        className={`van top-0 absolute w-full flex ${
           openSidebar ? 'pl-5' : 'pl-15'
         } py-2 items-center text-3xl font-bold transition-all duration-300 ease`}>
         Drake
@@ -174,7 +174,7 @@ export default function Ai({ openSidebar }: Props) {
               </div>
             )}
           </div>
-          <div className='absolute bottom-0 text-[13px] text-[#606060]'>
+          <div className='caut absolute bottom-0 text-[13px] text-[#606060]'>
             Drake can make mistakes.
           </div>
         </>

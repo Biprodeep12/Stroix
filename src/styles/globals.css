@@ -74,4 +74,19 @@ body {
     margin-bottom: 0;
     border-radius: 20px 20px 0 0;
   }
+  .caut {
+    display: none;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .mesCont {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sid {
+    position: fixed;
+    z-index: 80;
+    background-color: #ffffff;
+  }
 }
