@@ -11,18 +11,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .arBtn {
-  transform: translate(0, 25px);
+  opacity: 0;
+  transform: translate(0, 20px);
   animation: intextbtn 0.3s linear forwards;
 }
 
 .goBtn {
+  opacity: 1;
   transform: translate(0, 0);
   animation: outtextbtn 0.3s linear forwards;
 }
 
 @keyframes intextbtn {
   from {
-    transform: translate(0, 25px);
+    transform: translate(0, 20px);
     opacity: 0;
   }
   to {
@@ -37,7 +39,7 @@ body {
     opacity: 1;
   }
   to {
-    transform: translate(0, 25px);
+    transform: translate(0, 20px);
     opacity: 0;
   }
 }
@@ -62,6 +64,14 @@ body {
     transform: rotate(0);
   }
 }
+
 .mesCont {
   scrollbar-width: none;
+}
+@media screen and (max-width: 500px) {
+  .aiBox {
+    bottom: 0;
+    margin-bottom: 0;
+    border-radius: 20px 20px 0 0;
+  }
 }
