@@ -9,7 +9,7 @@ export default function Side({ openSidebar }: Props) {
 
   useEffect(() => {
     const updateSidebarWidth = () => {
-      setSidebarWidth(window.innerWidth < 600 ? 'w-[50%]' : 'w-[500px]');
+      setSidebarWidth(window.innerWidth < 600 ? 'w-[70%]' : 'w-[500px]');
     };
 
     if (typeof window !== 'undefined') {
