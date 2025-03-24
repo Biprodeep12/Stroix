@@ -24,7 +24,7 @@ export default function Side({ openSidebar }: Props) {
 
   return (
     <>
-      {openSidebar && (
+      {sidebarWidth == 'w-[70%]' && openSidebar && (
         <div className='fixed bg-gray-100 opacity-60 w-full h-screen z-80'></div>
       )}
       <div
